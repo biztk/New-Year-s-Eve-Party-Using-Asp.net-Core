@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model New_Year_s_Eve_Party_Using_Asp.net_Core.Models.PartyGuestResponse
+@{
+    //Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>RsvpForm</title>
+
+</head>
+<body>
+
+    <div>
+
+        <h1>Hey Asp.net core Project sample</h1>
+        <hr />
+        <form asp-action="GoPartyGustForm" method="post">
+            <div>
+                <label asp-for="First_Name">First Name:</label>
+                <input asp-for="First_Name" />
+            </div>
+            <div>
+                <label asp-for="Last_Name">Last_Name:</label>
+                <input asp-for="Last_Name" />
+            </div>
+            <div>
+                <label asp-for="Address">Address:</label>
+                <input asp-for="Address" />
+            </div>
+            <div>
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" />
+            </div>
+            <div>
+                <label asp-for="Phone">Phone:</label>
+                <input asp-for="Phone" />
+            </div>
+            <div>
+                <label asp-for="WillAttend">WillAttend:</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose the list of option</option>
+                    <option value="True">Yes,I will be there</option>
+                    <option value="False">No I Can't Come'</option>
+                </select>
+               
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <a asp-action="Index">Back To Home</a>
+    </div>
+</body>
+</html>

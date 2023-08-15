@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model New_Year_s_Eve_Party_Using_Asp.net_Core.Models.PartyGuestResponse
+@{
+    
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+        Thank you,@Model?.First_Name;
+        @if(Model?.WillAttend == true) 
+        {
+            @:he attend the new year eav party 
+        }
+        else
+        {
+            @:he is not attend the eve party
+        }
+    </div>
+Click <a asp-action="GoPartyGustForm">Go Back to form</a>
+</body>
+    </html>
+
+
